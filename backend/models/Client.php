@@ -16,7 +16,7 @@ class Client {
         $this->conn = $database->connect();
     }
 
-    // Create new client
+    // new client
     public function create() {
         $query = "INSERT INTO " . $this->table . " (name, email, loan_amount) 
                   VALUES (:name, :email, :loan_amount)";
@@ -27,7 +27,7 @@ class Client {
         return $stmt->execute();
     }
 
-    // Read all clients
+    
     public function readAll() {
         $query = "SELECT * FROM " . $this->table . " ORDER BY created_at DESC";
         $stmt = $this->conn->prepare($query);
