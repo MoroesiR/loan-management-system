@@ -2,8 +2,8 @@
 class Database {
   private $host = "localhost";
   private $db_name = "loan_system";
-  private $username = "YOUR_DB_USER";
-  private $password = "YOUR_DB_PASS";
+  private $username = "";
+  private $password = "";
   public $conn;
 
   public function getConnection() {
